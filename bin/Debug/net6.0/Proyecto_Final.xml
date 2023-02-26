@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Proyecto_Final</name>
+    </assembly>
+    <members>
+        <member name="T:Proyecto_Final.ProductoHandler">
+            <summary>
+            Clase que maneja la lógica de negocios para los productos.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Final.ProductoVendidoHandler">
+            <summary>
+            Clase que maneja la lógica de negocios para los productos vendidos.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Final.UsuarioHandler">
+            <summary>
+            Clase que maneja la lógica de negocios para los usuarios.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Final.VentaHandler">
+            <summary>
+            Clase que maneja la lógica de negocios para las ventas.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Final.Producto">
+            <summary>
+            Clase que contiene los atributos del modelo Producto mapeados de la base de datos SistemaGestion.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Final.ProductoVendido">
+            <summary>
+            Clase que contiene los atributos del modelo ProductoVendido mapeados de la base de datos SistemaGestion.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Final.Usuario">
+            <summary>
+            Clase que contiene los atributos del modelo Usuario mapeados desde la base de datos ModeloGestion.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Final.Venta">
+            <summary>
+            Clase que contiene los atributos del modelo Venta mapeados de la base de datos SistemaGestion.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Final.Program">
+            <summary>
+            Clase principal.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Final.Program.Main(System.String[])">
+            <summary>
+            Main.
+            </summary>
+        </member>
+    </members>
+</doc>
