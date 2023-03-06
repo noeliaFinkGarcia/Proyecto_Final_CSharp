@@ -44,7 +44,7 @@ namespace Proyecto_Final.Controllers
 
 
 
-        [HttpPost("/producto/insertProducto")]
+        [HttpPost("/producto/insertproducto")]
         public int CrearProducto (Producto productoNuevo)
         {
             ProductoHandler insertarProducto = new ProductoHandler();
@@ -53,14 +53,14 @@ namespace Proyecto_Final.Controllers
         }
 
 
-        [HttpPut("/producto/modificarProducto")]
+        [HttpPut("/producto/modificarproducto")]
         public int ModificarProducto (long idProductoModificar, Producto productoModificar)
         {
             ProductoHandler modificarProducto = new ProductoHandler();
             return modificarProducto.ModificarProducto(idProductoModificar, productoModificar);
         }
 
-        [HttpDelete("/Producto/eliminarProducto")]
+        [HttpDelete("/Producto/eliminarproducto")]
         public int EliminarProducto( long idProductoEliminar)
         {
             ProductoHandler eliminarProducto = new ProductoHandler();

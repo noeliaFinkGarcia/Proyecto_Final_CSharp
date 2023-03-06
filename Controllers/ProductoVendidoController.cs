@@ -7,7 +7,7 @@ namespace Proyecto_Final.Controllers
     [ApiController]
     public class ProductoVendidoController : ControllerBase
     {
-        [HttpGet("/ProductoVendido/{idUsuario}")]
+        [HttpGet("/productovendido/{idUsuario}")]
 
         public List<ProductoVendido> ObtenerProductosVendidos(long IdUsuario)
         {

@@ -17,18 +17,18 @@ namespace Proyecto_Final.Controllers
             return usuarioSolicitado;
         }
 
-        [HttpPost("/Usuario/manejadorLogin")]
+        [HttpPost("/usuario/login")]
         public Usuario logIn (Usuario usuario)
         {
-            string nombre = usuario.Nombre;
+            string nombreUsuario = usuario.NombreUsuario;
             string contraseña = usuario.Contrasena;
             Usuario login = new Usuario();
             UsuarioHandler manejadorLogin = new UsuarioHandler();
-            login = manejadorLogin.InicioDeSesion(nombre,contraseña);
+            login = manejadorLogin.InicioDeSesion(nombreUsuario,contraseña);
             return login;
         }
 
-        [HttpPost("/Usuario/insert/insertarUsuario")]
+        [HttpPost("/usuario/insert/insertarusuario")]
          public int InsertarUsuario(Usuario usuarioNuevo)
          {
             UsuarioHandler insertarUsuario = new UsuarioHandler();
