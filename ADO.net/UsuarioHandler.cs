@@ -21,17 +21,17 @@ namespace Proyecto_Final
         public SqlConnection conexion = new SqlConnection(connectionString);
 
 
-        public Usuario MostrarUsuario(string nombreUsuario)
+        public Usuario MostrarUsuario(long idUsuario)
         {
             Usuario usuarioSolicitado = new Usuario();
 
             using (conexion)
             {
-                SqlCommand comandoUsuario = new SqlCommand("SELECT * FROM Usuario WHERE Id = 'nombreUsuario'", conexion);
+                SqlCommand comandoUsuario = new SqlCommand("SELECT * FROM Usuario WHERE Id = 'idUsuario'", conexion);
                 SqlParameter parametroUsuario = new SqlParameter();
-                parametroUsuario.Value = nombreUsuario;
+                parametroUsuario.Value = idUsuario;
                 parametroUsuario.SqlDbType = SqlDbType.BigInt;
-                parametroUsuario.ParameterName = "NombreUsuario";
+                parametroUsuario.ParameterName = "Id";
 
                 comandoUsuario.Parameters.Add(parametroUsuario);
 

@@ -7,13 +7,13 @@ namespace Proyecto_Final.Controllers
     [ApiController]
     public class UsuarioController : ControllerBase
     {
-        [HttpGet("/Usuario/{nombreUsuario}")]
+        [HttpGet("/Usuario/{id}")]
 
-        public Usuario ObtenerUsuario (string nombreUsuario)
+        public Usuario ObtenerUsuario (long id)
         {
             UsuarioHandler manejadorUsuario = new UsuarioHandler();
             Usuario usuarioSolicitado = new Usuario();
-            usuarioSolicitado = manejadorUsuario.MostrarUsuario(nombreUsuario);
+            usuarioSolicitado = manejadorUsuario.MostrarUsuario(id);
             return usuarioSolicitado;
         }
 
@@ -36,7 +36,7 @@ namespace Proyecto_Final.Controllers
    
          }
 
-        [HttpPut("/Usuario/actualizar/ActualizarUsuario")]
+        [HttpPut("/Usuario/actualizar/actualizarusuario")]
         public bool ModificarUsuario (Usuario usuarioActualizar)
         {
             UsuarioHandler UpdateUsuario = new UsuarioHandler();
@@ -46,11 +46,11 @@ namespace Proyecto_Final.Controllers
             else return true;
         }
 
-        [HttpDelete("/Usuario/{idUsuario}")]
-        public bool EliminarUsuario (long idUsuarioEliminar)
+        [HttpDelete("/Usuario/{idusuarioeliminar}")]
+        public bool EliminarUsuario (long idusuarioeliminar)
         {
             UsuarioHandler EliminarUsuario = new UsuarioHandler();
-            if(!(EliminarUsuario.EliminarUsuario(idUsuarioEliminar) > 0))
+            if(!(EliminarUsuario.EliminarUsuario(idusuarioeliminar) > 0))
             return false;
             else return true;
         }
