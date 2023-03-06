@@ -27,7 +27,7 @@ namespace Proyecto_Final
 
             using (conexion)
             {
-                SqlCommand comandoUsuario = new SqlCommand("SELECT * FROM Usuario WHERE Id = 'idUsuario'", conexion);
+                SqlCommand comandoUsuario = new SqlCommand("SELECT * FROM Usuario WHERE Id = idUsuario", conexion);
                 SqlParameter parametroUsuario = new SqlParameter();
                 parametroUsuario.Value = idUsuario;
                 parametroUsuario.SqlDbType = SqlDbType.BigInt;
@@ -49,7 +49,7 @@ namespace Proyecto_Final
 
                 }
             }
-            return usuarioSolicitado;
+             return usuarioSolicitado;
         }
 
 

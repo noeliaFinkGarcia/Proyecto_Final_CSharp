@@ -104,7 +104,7 @@ namespace Proyecto_Final
 
                 comandoProductoDescrip.Parameters.Add(descripcionParametro);
                 conexion.Open();
-                var reader = comandoProductoDescrip.ExecuteReader();
+                SqlDataReader reader = comandoProductoDescrip.ExecuteReader();
                 if (reader.HasRows)
                 {
                     reader.Read();
