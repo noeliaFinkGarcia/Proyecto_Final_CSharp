@@ -49,8 +49,8 @@ namespace Proyecto_Final
                         productoPedido.Stock = reader.GetInt32(1);
                         productoPedido.IdProducto = reader.GetInt64(2);
                         productoPedido.IdVenta = reader.GetInt64(3);
+                        productosVendidos.Add(productoPedido);
                     }
-                    productosVendidos.Add(productoPedido);
                 }
             }
             return productosVendidos;
